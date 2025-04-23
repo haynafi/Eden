@@ -24,7 +24,7 @@ class PurchaseController extends Controller
 
         return Inertia::render('Purchases/Index', [
             'purchases' => $purchases,
-        ])->withViewData(['layout' => 'AppLayout']);
+        ]);
     }
 
     public function store(Request $request)
