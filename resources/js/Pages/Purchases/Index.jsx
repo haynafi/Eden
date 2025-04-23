@@ -15,6 +15,7 @@ import {
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog";
 import { Eye, FileX } from "lucide-react";
 import AppLayout from "@/Layouts/AppLayout";
+import AuthenticatedLayout from '@/Layouts/AuthenticatedLayout';
 
 export default function Purchases({ purchases, status, auth }) {
   const { data, setData, post, processing, errors } = useForm({
@@ -54,7 +55,14 @@ export default function Purchases({ purchases, status, auth }) {
   };
 
   return (
-    <AppLayout auth={auth}>
+    <AuthenticatedLayout
+                header={
+                    <h2 className="text-xl font-semibold leading-tight text-gray-800">
+                        Purchasing Page
+                    </h2>
+                }
+            >
+    {/* <AppLayout auth={auth}> */}
       <div className="py-6 px-4 sm:px-6 lg:px-8">
         <div className="max-w-5xl mx-auto space-y-6">
           {/* Form Card */}
@@ -225,6 +233,7 @@ export default function Purchases({ purchases, status, auth }) {
           </Card>
         </div>
       </div>
-    </AppLayout>
+    {/* </AppLayout> */}
+            </AuthenticatedLayout>
   );
 }

@@ -27,6 +27,10 @@ export default {
     				foreground: 'hsl(var(--popover-foreground))'
     			},
     			primary: {
+					mustard: '#D4A373',
+					beige: '#F5E9D7',
+					pink: '#F9E4E4',
+					cream: '#FFF8E7',
     				DEFAULT: 'hsl(var(--primary))',
     				foreground: 'hsl(var(--primary-foreground))'
     			},
