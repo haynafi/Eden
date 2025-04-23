@@ -5,7 +5,7 @@ import AppLayout from "@/Layouts/AppLayout";
 
 export default function Welcome({ auth }) {
   return (
-    <AppLayout auth={auth}>
+    // <AppLayout auth={auth}>
       <div className="flex items-center justify-center px-4 sm:px-6 lg:px-8 mt-8 sm:mt-16">
         <Card className="w-full max-w-lg sm:max-w-2xl">
           <CardHeader className="text-center">
@@ -17,12 +17,12 @@ export default function Welcome({ auth }) {
             </p>
             {!auth.user && (
               <Link href={route("login")} className="mt-4 inline-block">
-                <Button className="w-full sm:w-auto">Get Started</Button>
+                <Button className="w-full sm:w-auto">Login</Button>
               </Link>
             )}
           </CardContent>
         </Card>
       </div>
-    </AppLayout>
+    // </AppLayout>
   );
 }
